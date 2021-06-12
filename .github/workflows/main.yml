@@ -20,7 +20,7 @@ jobs:
       - name: NPM Install
         run: npm install
       - name: PKG Install
-        run: node_modules/pkg/lib-es5/bin.js run.js
+        run: node_modules/pkg/lib-es5/bin.js package.json
       - uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
