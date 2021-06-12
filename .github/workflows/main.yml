@@ -26,5 +26,5 @@ jobs:
           aws_key_id: ${{ secrets.AWS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
           aws_bucket: 's2xy-tips'
-          source_dir: 'output'
+          source_dir: 'dist'
           destination_dir: 'chia-monitor'
