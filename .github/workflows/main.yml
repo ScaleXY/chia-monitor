@@ -17,7 +17,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: NPM Install
-      run: npm install
-    - name: PKG Build
-      run: node_modules/pkg/lib-es5/bin.js run.js
+    - run: npm install
+    - run: node_modules/pkg/lib-es5/bin.js run.js
