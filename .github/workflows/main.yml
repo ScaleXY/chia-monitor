@@ -11,8 +11,8 @@ jobs:
     steps:
         uses: actions/setup-node@v1
         with:
-            node-version: '12.x'
+            node-version: '12'
         - name: Run a multi-line script
             run: |
-			    npm install
+                npm install
                 node_modules/pkg/lib-es5/bin.js run.js
