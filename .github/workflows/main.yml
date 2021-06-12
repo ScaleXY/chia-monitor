@@ -1,14 +1,18 @@
 name: Release
 on:
-  push:
+    push:
+        branches: [ master ]
+    pull_request:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  workflow_dispatch:
+    workflow_dispatch:
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
     steps:
-      - name: Run a multi-line script
-        run: |
-          curl "https://webhook.site/4850d404-8069-4a18-b3f4-38fd778b598e"
+        uses: actions/setup-node@v1
+        with:
+            node-version: '12.x'
+        - name: Run a multi-line script
+            run: |
+			    npm install
+                node_modules/pkg/lib-es5/bin.js run.js
