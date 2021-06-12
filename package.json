@@ -1,0 +1,24 @@
+{
+  "name": "chia-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sindresorhus/df": "^3.1.1",
+    "conf": "^10.0.1",
+    "node-fetch": "^2.6.1",
+    "uuid": "^8.3.2"
+  },
+  "pkg": {
+    "targets": [
+		"node14-linux-arm64",
+		"node14-macos-x64"
+	],
+    "outputPath": "dist"
+  }
+}
