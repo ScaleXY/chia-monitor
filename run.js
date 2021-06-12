@@ -12,19 +12,14 @@ async function updateInfo(device_id) {
 		.then(data => {
 			fetch("https://chiadash.scalexy.app/api/chia-monitor",	{
 				method: 'POST',
-				mode: 'no-cors',
-				cache: 'no-cache',
-				credentials: 'same-origin',
 				headers: {
 				  'Content-Type': 'application/json'
 				},
-				redirect: 'follow',
-				referrerPolicy: 'no-referrer',
 				body: JSON.stringify({
 					device_id: device_id,
 					data: data,
-				})
-			  });
+				}),
+			});
 		})
 };
 
