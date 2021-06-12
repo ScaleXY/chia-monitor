@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Run a multi-line script
-      run: |
-        npm install
-        node_modules/pkg/lib-es5/bin.js run.js
+    - name: NPM Install
+      run: npm install
+    - name: PKG Build
+      run: node_modules/pkg/lib-es5/bin.js run.js
