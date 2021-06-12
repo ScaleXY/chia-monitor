@@ -10,7 +10,7 @@ const config = new Conf({
 async function updateInfo(device_id) {
 	await df()
 		.then(data => {
-			fetch("https://chiadash.scalexy.app",	{
+			fetch("https://chiadash.scalexy.app/api/chia-monitor",	{
 				method: 'POST',
 				mode: 'no-cors',
 				cache: 'no-cache',
